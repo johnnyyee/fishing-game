@@ -1,7 +1,12 @@
 import random
 
 # 20 lines of code. Each player has three turns per round.
-fishing = True
+inp = input("fish or stop?")
+if inp == "fish":
+    fishing = True
+else:
+    fishing = False
+
 while fishing == True:
     
     num = random.randint(1,6)
