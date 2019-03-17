@@ -94,4 +94,10 @@ for y in range(imp):
                     fishing = False
 
 
+if p1 > p2:
+    print("Player 1 wins!")
+elif p2 > p1:
+    print("Player 2 wins!")
+else:
+    print("It's a draw!")
 
