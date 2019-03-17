@@ -1,12 +1,13 @@
 import random
 
 # 20 lines of code. Each player has three turns per round.
+
+
 inp = input("fish or stop?")
 if inp == "fish":
     fishing = True
 else:
     fishing = False
-
 while fishing == True:
     
     num = random.randint(1,6)
@@ -28,15 +29,28 @@ while fishing == True:
 
     if num == 1:
         print(uc, fish1)
+        fishing = False
     elif num == 2:
         print(uc, fish2)
+        fishing = False
     elif num == 3:
         print(uc, fish3)
+        fishing = False
     elif num == 4:
         print(uc, fish4)
+        fishing = False
     elif num == 5:
         print(uc, fish5)
+        fishing = False
     else:
         print(uc, "an electric eel! You have zero points and your turn is over.")
-        
         fishing = False
+       
+    if num == 6:
+        pass
+    else:
+        inp = input("fish or stop?")
+        if inp == "fish":
+            fishing = True
+        else:
+            fishing = False
