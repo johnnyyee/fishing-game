@@ -2,13 +2,11 @@ import random
 
 # 20 lines of code. Each player has three turns per round.
 
-
-inp = input("fish or stop?")
-if inp == "fish":
-    fishing = True
-else:
-    fishing = False
+fishing = True
     
+p1 = 0
+p2 = 0
+
 
 for x in range(2):
     
@@ -45,19 +43,42 @@ for x in range(2):
             fishing = False
         elif num == 2:
             print(uc, fish2)
+            if x == 0:
+                p1 += 1
+            else:
+                p2 += 1
             fishing = False
         elif num == 3:
             print(uc, fish3)
+            if x == 0:
+                p1 += 3
+            else:
+                p2 += 3
             fishing = False
         elif num == 4:
             print(uc, fish4)
+            if x == 0:
+                p1 += 5
+            else:
+                p2 += 5
             fishing = False
         elif num == 5:
             print(uc, fish5)
+            if x == 0:
+                p1 += 10
+            else:
+                p2 += 10
             fishing = False
         else:
             print(uc, "an electric eel! You have zero points and your turn is over.")
+            if x == 0:
+                p1 = 0
+            else:
+                p2 = 0
             fishing = False
+            
+            
+        print("Player 1:",p1,"Player 2:",p2)
            
         if num == 6:
             pass
@@ -69,12 +90,4 @@ for x in range(2):
                 fishing = False
 
 
-# p1 = 0
-# p2 = 0
-# if num == 1:
-#    pass
-# elif num == 2:
-#    p1 = p1 + 1
-# elif num == 3:
-    
 
