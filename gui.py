@@ -1,15 +1,18 @@
 from tkinter import *
+import fishing
 
 # ** Recipe ***
 # 1 Window
 # 2 Buttons
 # 5 Labels
 
+def test():
+    p1n.config(text="jelly")
 
 w = Tk()
 w.title("test")
 
-fishbutton = Button(w, text="Fish!")
+fishbutton = Button(w, text="Fish!",command=fishing.fish)
 fishbutton.pack()
 stopbutton = Button(w, text="Stop!")
 stopbutton.pack()
