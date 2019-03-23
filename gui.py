@@ -6,13 +6,15 @@ import fishing
 # 2 Buttons
 # 5 Labels
 
-def test():
-    p1n.config(text="jelly")
+def fishh():
+    fishing.fish()
+    caught.config(text=fishing.turn.result)
+
 
 w = Tk()
 w.title("test")
 
-fishbutton = Button(w, text="Fish!",command=fishing.fish)
+fishbutton = Button(w, text="Fish!",command=fishh)
 fishbutton.pack()
 stopbutton = Button(w, text="Stop!")
 stopbutton.pack()
