@@ -9,52 +9,59 @@ fish3 = "a catfish. +3"
 fish4 = "a giant squid! +5"
 fish5 = "a MEGALODON!!! +10"
 
-x=0
-class turn:
+
+
+class Turn:
+    player1turn = True
     result = ""
+    switch = False
+    
+class Points:
+    p1 = 0
+    p2 = 0
 
 def fish():    
     num = random.randint(1,6)
-    p1=0
-    p2=0
-
+    
     if num == 1:
-        turn.result = (uc, fish1)
+        Turn.result = (uc, fish1)
     
     elif num == 2:
-        turn.result = (uc, fish2)
-        if x == 0:
-            p1 += 1
+        Turn.result = (uc, fish2)
+        if Turn.player1turn:
+            Points.p1 += 1
         else:
-            p2 += 1
+            Points.p2 += 1
         
     elif num == 3:
-        turn.result = (uc, fish3)
-        if x == 0:
-            p1 += 3
+        Turn.result = (uc, fish3)
+        if Turn.player1turn:
+            Points.p1 += 3
         else:
-            p2 += 3
+            Points.p2 += 3
     
     elif num == 4:
-        turn.result = (uc, fish4)
-        if x == 0:
-            p1 += 5
+        Turn.result = (uc, fish4)
+        if Turn.player1turn:
+            Points.p1 += 5
         else:
-            p2 += 5
+            Points.p2 += 5
     
     elif num == 5:
-        turn.result = (uc, fish5)
-        if x == 0:
-            p1 += 10
+        Turn.result = (uc, fish5)
+        if Turn.player1turn:
+            Points.p1 += 10
         else:
-            p2 += 10
+            Points.p2 += 10
     
     else:
-        turn.result = (uc, "an electric eel! You have zero points and your turn is over.")
-        if x == 0:
-            p1 = 0
+        Turn.result = (uc, "an electric eel! You have zero points and your Turn is over.")
+        if Turn.player1turn:
+            Points.p1 = 0
+            Turn.switch = True
         else:
-            p2 = 0
+            Points.p2 = 0
+            Turn.switch = True
     
 
 
